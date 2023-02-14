@@ -5,6 +5,9 @@ import Header from '../header';
 
 const AboutBanner = "/assets/images/BannerBg.png"
 const coreIocn1 = "/assets/images/coreIcon1.png"
+const coreIcon2 = "/assets/images/core-2.png"
+const coreIcon3 = "/assets/images/core-3.png"
+const coreIcon4 = "/assets/images/core-4.png"
 const Group1 = "/assets/images/Group1.png"
 const Logo = '/assets/images/logo.png';
 const OS1 = '/assets/images/os1.png';
@@ -76,9 +79,9 @@ export default function Aboutus() {
             </div>
             <div className={styles.subgrid}>
               <div className={styles.boxDesign}>
-                <div className={styles.roundebox}>
-                  <div className={styles.innerbox}>
-                    <img src={coreIocn1} />
+                <div className={styles.roundebox2}>
+                  <div className={styles.innerbox2}>
+                    <img src={coreIcon2} />
                   </div>
                 </div>
                 <h4>Positively Impacting
@@ -90,7 +93,7 @@ export default function Aboutus() {
               <div className={styles.boxDesign}>
                 <div className={styles.roundebox}>
                   <div className={styles.innerbox}>
-                    <img src={coreIocn1} />
+                    <img src={coreIcon3} />
                   </div>
                 </div>
                 <h4>Being Customer Obsessed</h4>
@@ -99,9 +102,9 @@ export default function Aboutus() {
             </div>
             <div className={styles.subgrid}>
               <div className={styles.boxDesign}>
-                <div className={styles.roundebox}>
-                  <div className={styles.innerbox}>
-                    <img src={coreIocn1} />
+                <div className={styles.roundebox2}>
+                  <div className={styles.innerbox2}>
+                    <img src={coreIcon4} />
                   </div>
                 </div>
                 <h4>Nurturing and
