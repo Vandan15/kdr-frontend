@@ -1,0 +1,127 @@
+@import "~bootstrap/scss/bootstrap";
+.why-invest-us-wrapper {
+    .btn-group {
+        display: flex;
+        button {
+            color: #747474;
+            background-color: transparent;
+            border: 0;
+            padding-right: 25px;
+            &.active {
+                color: #3555d3;
+            }
+        }
+        @media (max-width:767px) {
+            flex-direction: column;
+            button {
+                margin-bottom: 15px;
+                padding: 10px 15px;
+                color: #3555d3;
+                background-color: transparent;
+                border: 1px solid #3555d3;
+                &.active {
+                    background-color: #3555d3;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 767px) {
+                flex-direction: column;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+            }
+            .content {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    font-size: 20px;
+                    @media (max-width: 767px) {
+                        text-align: center;
+                    }
+                }
+                p {
+                    color: #686868;
+                    @media (max-width: 767px) {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+.why-invest-wrapper-content {
+    margin-top: 60px !important;
+    .header-text {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 74px;
+        color: #000000;
+        margin-bottom: 60px;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 800px;
+    }
+    .img-box {
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            border-radius: 15px;
+            font-size: 18px;
+            text-align: center;
+            min-height: 150px;
+            p {
+                color: #fff;
+            }
+            &.bg-1 {
+                background: url("../public/assets/images/feature-3.png") no-repeat;
+                background-position: center;
+                background-color: grey;
+                background-blend-mode: multiply;
+            }
+            &.bg-2 {
+                background: url("../public/assets/images/feature-2.png") no-repeat;
+                background-position: center;
+                background-color: grey;
+                background-blend-mode: multiply;
+            }
+            &.bg-3 {
+                background: url("../public/assets/images/feature-1.png") no-repeat;
+                background-position: center;
+                background-color: grey;
+                background-blend-mode: multiply;
+            }
+        }
+    }
+}
+.footer-social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        border: 1px solid #000000;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            padding: 4px;
+        }
+    }
+}

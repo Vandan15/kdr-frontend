@@ -1,0 +1,20 @@
+Header:
+1. LOGO missing
+
+
+HOMEPAGE: (URL: /)
+1. Left right button missing
+2. In current portfolio card when hover on image it should show Learn More button and background should be blur
+3. Card box-shadow not showing in bottom (appearing as square)
+
+CAREER OPPORTUNITY: (URL: /career-opportunities)
+ALL GOOD
+
+ABOUT US: (URL: /about-us)
+1. Puneet Gorawara & Managing Partner (content as per figma. right now all are same -see figma)
+2. Second block is in right side
+3. Linked in icon missing
+4. Organization structure (Arrows are missing, content is same, icon is same, second card color is green)
+
+
+*ALL PAGES SHOULD BE RESPONSIVE
