@@ -1,3 +1,5 @@
+@import '../../styles/mixins/global.scss';
+
 .aboutsBanner {
     background-image: url(../../public/assets/images/aboutBanner.png);
     padding: 130px 0;
@@ -56,6 +58,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 35px;
         margin-top: 30px;
+        @include breakpoint("max-sm"){
+            grid-template-columns: repeat(1, 1fr);
+        }
+        
 
         .boxlight {
             border: 1px solid #E7E7E7;
@@ -123,11 +129,23 @@
 .boxLine {
     margin-top: -180px;
     padding-bottom: 80px;
+    @include breakpoint("max-xsm"){
+       padding-bottom: 0;
+     }
 
     .gridBox {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
+        @include breakpoint("max-sm"){
+            grid-template-columns: repeat(2, 1fr);
+            .subgrid{
+                margin-bottom: 80px;
+            }
+        }
+        @include breakpoint("max-xsm"){
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         .boxDesign {
             background: #FFFFFF;
@@ -137,7 +155,9 @@
             border-radius: 30px;
             position: relative;
             height: 100%;
-
+            // @include breakpoint("max-sm"){
+            //   margin-top: 90px;
+            // }
             h4 {
                 font-weight: 500;
                 font-size: 24px;
@@ -200,6 +220,9 @@
 
 .teambox {
     padding-bottom: 80px;
+    @include breakpoint("max-xsm"){
+       padding-bottom: 0;
+     }
 
     .teamboxheading {
         max-width: 850px;
@@ -212,6 +235,9 @@
             font-size: 45px;
             line-height: 74px;
             color: #000000;
+            @include breakpoint("max-xsm"){
+                font-size: 25px;
+             }
         }
 
         p {
@@ -230,12 +256,26 @@
             grid-template-columns: 350px auto;
             gap: 40px;
             align-items: center;
+            @include breakpoint("max-sm"){
+               grid-template-columns: repeat(1,1fr);
+               gap: 15px;
+            }
 
             img {
                 display: block;
             }
 
+            .ImageIcon{
+                position: relative;
+                .linkicon{
+                    position: absolute;
+                    bottom: 69px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
             .subGrid {
+
                 h5 {
                     font-weight: 500;
                     font-size: 24px;
@@ -255,6 +295,27 @@
                     font-size: 16px;
                     color: #686868;
                     margin: 12px 0 0;
+                }
+            }
+        }
+        &:nth-child(3){
+            .grid{
+                grid-template-columns: auto 350px;
+                @include breakpoint("max-sm"){
+                    grid-template-columns: repeat(1,1fr);
+                    gap: 15px;
+                    .subGrid{
+                        &:first-child{
+                            order: 2;
+                        }
+                        &:first-child{
+                            order: 1;
+                        }
+                    }
+                 }
+     
+                .subGrid{
+                    text-align: right;
                 }
             }
         }
@@ -278,12 +339,17 @@
     }
 
     .gridrow {
-
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;  
         margin-top: 100px;
-
+        @include breakpoint("max-sm"){
+            grid-template-columns: repeat(2,1fr);
+         }
+         @include breakpoint("max-xsm"){
+            grid-template-columns: repeat(1,1fr);
+         }
+         
         .boxbule {
             background: #3555D3;
             border: 1px solid #DADADA;
@@ -295,6 +361,8 @@
             img {
                 width: 90px;
                 margin-bottom: 20px;
+                height: 90px;
+    object-fit: contain;
             }
 
             h4 {
@@ -319,6 +387,18 @@
                 border: 3px solid #fff;
                 margin: -50px auto 40px;
             }
+        }
+        .subgrid{
+
+            &:nth-child(2){
+                .boxbule{
+                    background-color: #A6D03E;
+                    .roundboxshap{
+                    background-color: #A6D03E;
+
+                    }
+                }
+            }   
         }
     }
 }

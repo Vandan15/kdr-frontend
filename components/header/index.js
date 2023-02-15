@@ -21,7 +21,7 @@ export default function Header() {
             <div className={styles.leftcontent}>
 
               <div className={styles.menu}>
-                <Link href='/about-us'><a >About us</a></Link>
+                <Link href='/about-us'><a >About Us</a></Link>
                 <Link href='/current-portfolio'><a >Portfolio</a></Link>
                 <Link href='/career-opportunities'><a >Career</a></Link>
                 <Link href='/invest-with-us'><a >Invest With Us</a></Link>
@@ -46,10 +46,11 @@ export default function Header() {
           </div>
         </div>
         <div className={styles.mobileBody}>
-          <Link href='/about-us'><a>About us</a></Link>
+          <Link href='/about-us'><a>About Us</a></Link>
           <Link href='/current-portfolio'><a>Portfolio</a></Link>
           <Link href='/career-opportunities'><a>Career</a></Link>
           <Link href='/invest-with-us'><a>Invest With Us</a></Link>
+          <Link href='/invest-with-us'><a>Contact Us</a></Link>
         </div>
       </div>
     </>

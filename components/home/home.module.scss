@@ -314,6 +314,10 @@
                 font-size: 20px;
                 line-height: 44px;
                 color: rgba(255, 255, 255, 0.7);
+                @media (max-width:767px) {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
             }
 
             button {
@@ -323,7 +327,7 @@
                 margin-top: 29px;
                 font-size: 20px;
                 color: #101010;
-                line-height: 40px;
+                // line-height: 40px;
                 padding: 10px 27px;
                 border-radius: 11px;
             }
@@ -610,6 +614,9 @@
                 font-size: 16px;
                 margin-right: 20px;
                 letter-spacing: 4px;
+                @media (max-width: 459px) {
+                    margin-right: 0;
+                }
             }
 
             background: #FFFFFF;
@@ -669,7 +676,7 @@
             border-radius: 11px;
             font-weight: 400;
             font-size: 18px;
-            line-height: 44px;
+            // line-height: 44px;
             border: 0;
             letter-spacing: 5px;
 

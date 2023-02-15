@@ -9,8 +9,11 @@ const coreIcon2 = "/assets/images/core-2.png"
 const coreIcon3 = "/assets/images/core-3.png"
 const coreIcon4 = "/assets/images/core-4.png"
 const Group1 = "/assets/images/Group1.png"
-const Logo = '/assets/images/logo.png';
+const Logo = '/logo.png';
 const OS1 = '/assets/images/os1.png';
+const OS2 = '/assets/images/os2.png';
+const OS3 = '/assets/images/os3.png';
+const Linkdin = '/assets/images/linkdin.png';
 
 export default function Aboutus() {
 
@@ -127,7 +130,10 @@ export default function Aboutus() {
           <div className="container">
             <div className={styles.grid}>
               <div className={styles.subgrid}>
-                <img src={Group1} />
+                <div className={styles.ImageIcon}>
+                  <img src={Group1} />
+                  <img className={styles.linkicon} src={Linkdin} />
+                </div>
               </div>
               <div className={styles.subGrid}>
                 <h5>Puneet Gorawara</h5>
@@ -140,14 +146,20 @@ export default function Aboutus() {
         <div className={styles.bglinebox}>
           <div className="container">
             <div className={styles.grid}>
-              <div className={styles.subgrid}>
-                <img src={Group1} />
-              </div>
               <div className={styles.subGrid}>
-                <h5>Puneet Gorawara</h5>
-                <span>Managing Partner</span>
-                <p>Puneet Gorawara CCIM is the Managing Partner of KDR Group, a multi-family investment firm with 18 years of expertise in the acquisition, financing, management, and disposition of properties. Puneet, who moved to the US in the late 90s, has built a strong network of High Net Worth (“HNW”) equity investors, real estate brokers, and mortgage brokers. His prior experience in business process engineering with clients such as AOL/ Time Warner, Oracle, Beckman & Coulter, AT&T, and the University of Alabama has been instrumental in the success of KDR Group. Puneet holds a degree in Chemical Engineering from IIT Varanasi, India (1985), and is a Certified Commercial Investment Member (CCIM).</p>
+                <h5>Aabha Gorawara</h5>
+                <span>Chief Operating Officer</span>
+                <p>
+                  Aabha Gorawara is an 18-year veteran at KDR Group and has deep experience in overseeing the day-to-day operations of multi-family portfolios across 6 cities. Working alongside Puneet, she is heavily involved in renovating, upgrading, and repositioning these properties, with all property managers and maintenance supervisors reporting to her. Aabha’s keen eye and passion for modernizing and optimizing assets have helped to attract the best demographic mix. Before joining KDR, Aabha worked as a Senior Specialist for the USDA, specializing in domain management. She earned her degree in Civil Engineering from Punjab Engineering College in Chandigarh (1988) and prior to moving to the US in the late 90s, had worked as a Business Process Specialist for one of India’s largest industrial conglomerates.
+                </p>
               </div>
+              <div className={styles.subgrid}>
+                <div className={styles.ImageIcon}>
+                  <img src={Group1} />
+                  <img className={styles.linkicon} src={Linkdin} />
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -155,12 +167,19 @@ export default function Aboutus() {
           <div className="container">
             <div className={styles.grid}>
               <div className={styles.subgrid}>
-                <img src={Group1} />
+                <div className={styles.ImageIcon}>
+                  <img src={Group1} />
+                  <img className={styles.linkicon} src={Linkdin} />
+                </div>
               </div>
               <div className={styles.subGrid}>
-                <h5>Puneet Gorawara</h5>
-                <span>Managing Partner</span>
-                <p>Puneet Gorawara CCIM is the Managing Partner of KDR Group, a multi-family investment firm with 18 years of expertise in the acquisition, financing, management, and disposition of properties. Puneet, who moved to the US in the late 90s, has built a strong network of High Net Worth (“HNW”) equity investors, real estate brokers, and mortgage brokers. His prior experience in business process engineering with clients such as AOL/ Time Warner, Oracle, Beckman & Coulter, AT&T, and the University of Alabama has been instrumental in the success of KDR Group. Puneet holds a degree in Chemical Engineering from IIT Varanasi, India (1985), and is a Certified Commercial Investment Member (CCIM).</p>
+                <h5>Gauri Gorawara </h5>
+                <span>Vice President</span>
+                <p>Gauri Gorawara is the Vise President- Operations of KDR Group, a global real estate and asset management firm with a reputation for excellence in managing multi-family operations.
+                  With over a decade of experience in the field, Gauri is an accomplished real estate professional who has worked with esteemed firms such as TIAA and Cushman Wakefield. She has successfully managed a wide range of real estate portfolios and brings a wealth of knowledge to her role at KDR Group.</p>
+                <p>
+                  Gauri holds a Master's Degree in Real Estate from New York University (NYU), and her expertise in asset management and multi-family operations has made her a valuable asset to the company.
+                </p>
               </div>
             </div>
           </div>
@@ -176,7 +195,7 @@ export default function Aboutus() {
           <div className={styles.gridrow}>
             <div className={styles.subgrid}>
               <div className={styles.boxbule}>
-              <div className={styles.roundboxshap}></div>
+                <div className={styles.roundboxshap}></div>
                 <img src={OS1} />
                 <h4>KDR Realty Management</h4>
                 <p>In House management and maintenance of all properties with support services in india</p>
@@ -185,16 +204,16 @@ export default function Aboutus() {
             <div className={styles.subgrid}>
 
               <div className={styles.boxbule}>
-              <div className={styles.roundboxshap}></div>
-                <img src={OS1} />
+                <div className={styles.roundboxshap}></div>
+                <img src={OS2} />
                 <h4>KDR Equity Finance</h4>
                 <p>General Partner and managing member of all the legal entities and acquisition vehicles</p>
               </div>
             </div>
             <div className={styles.subgrid}>
               <div className={styles.boxbule}>
-              <div className={styles.roundboxshap}></div>
-                <img src={OS1} />
+                <div className={styles.roundboxshap}></div>
+                <img src={OS3} />
                 <h4>KDR Services Maintenance</h4>
                 <p>18 years of experience in portfoilo management including acquisitions, management and manitenance of multifamily residential real estate</p>
               </div>

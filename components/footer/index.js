@@ -58,7 +58,7 @@ export default function Footer() {
                   <div className={styles.subGrid}>
                     <div className={styles.linebox}>
                       <img src={Mail} />
-                      <a>kdrgroup@gmail.in</a>
+                      <a>info@kdrgroups.com</a>
                     </div>
                   </div>
                 </div>
