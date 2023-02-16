@@ -51,7 +51,7 @@ export default function Header() {
           <Link href='/current-portfolio'><a>Portfolio</a></Link>
           <Link href='/career-opportunities'><a>Career</a></Link>
           <Link href='/invest-with-us'><a>Invest With Us</a></Link>
-          <Link href='/invest-with-us'><a>Contact Us</a></Link>
+          <Link href='/contact-us'><a>Contact Us</a></Link>
         </div>
       </div>
     </>

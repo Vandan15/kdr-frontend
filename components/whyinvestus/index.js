@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Why.module.scss';
 import Footer from '../footer';
 import Header from '../header';
+import Link from 'next/link';
 
 const AboutBanner = "/assets/images/BannerBg.png"
 const coreIocn1 = "/assets/images/coreIcon1.png"
@@ -80,7 +81,7 @@ export default function WhyInvestUs() {
             <div className={styles.subBuleGrid}>
               <h4>KDR Group is a 30-year-old family business that has since grown to 750 employees with over $9 billion of real estate owned and managed.</h4>
               <p className={styles.author}>- Ken Roney</p>
-              <button>Invest With Us</button>
+              <Link href='/contact-us'><button>Contact Us</button></Link>
             </div>
           </div>
 

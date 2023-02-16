@@ -8,6 +8,7 @@ import Career from '../career';
 import Aboutus from '../aboutus';
 import { client } from '../../client';
 import CTA from './CTA';
+import Link from 'next/link';
 const LeftIcon = '/assets/images/slider-left.svg';
 
 
@@ -152,7 +153,7 @@ export default function HomePage() {
                     <h1>Wealth protection. <br /> <span>Wealth generation.</span></h1>
                     <p>Private Real Estate Investments for
                       Accredited Investors</p>
-                    <button>VIEW OUR PRODUCTS</button>
+                    <Link href='/current-portfolio'><button>VIEW OUR PRODUCTS</button></Link>
                   </div>
                 </div>
                 <div className={styles.subGrid}>
@@ -187,7 +188,7 @@ export default function HomePage() {
                 <h4>A Trusted Source
                   for Multifamily Living
                   and Investment</h4>
-                <button>Learn More</button>
+                <Link href='/about-us'><button>Learn More</button></Link>
               </div>
               <div className={styles.subBuleGrid}>
                 <p>At KDR Group, a good partnership is one where everyone wins together. As newcomers to the United States, we started KDR Group with the goal of growing and protecting our own wealth. We are proud to be the largest investors in the company, and we strive to create real value for our partners.</p>
