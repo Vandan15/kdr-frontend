@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Career.module.scss';
 import Footer from '../footer';
 import Header from '../header';
+import CTA from '../home/CTA';
 
 const Career1 = "/assets/images/Career1.png"
 const correct = "/assets/images/correct.png"
@@ -195,7 +196,7 @@ export default function Career() {
           </div>
         </div>
       </div>
-
+      <CTA />
       <Footer />
 
     </div>

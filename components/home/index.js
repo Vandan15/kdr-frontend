@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import styles from './home.module.scss';
 import Footer from '../footer';
 import Header from '../header';
@@ -6,6 +6,8 @@ import Slider from 'react-slick';
 // import Aboutus from '../Aboutus';
 import Career from '../career';
 import Aboutus from '../aboutus';
+import { client } from '../../client';
+import CTA from './CTA';
 const LeftIcon = '/assets/images/slider-left.svg';
 
 
@@ -49,6 +51,50 @@ function SamplePrevArrow(props) {
 }
 
 export default function HomePage() {
+  const [dataList, setDataList] = useState([]);
+  useEffect(() => {
+    client.getEntries()
+      .then((entry) => {
+        const { items } = entry;
+        setDataList(items);
+      })
+      .catch(console.error)
+  }, [])
+  const renderData = useMemo(() => {
+    return dataList.map(d => {
+      const { fund, fundType, image, irr, multiple, title } = d.fields;
+      return (
+        <div className={styles.px4}>
+          <div className={styles.cardBg}>
+            <div className={styles.cartImage}>
+              <div className={styles.Imagehover}>
+                <img src={Imagone} />
+                <div className={styles.backgroundlr}>
+                  <button>Learn More</button>
+                </div>
+              </div>
+              <div className={styles.tag}>EQUITY</div>
+              <h4>Woodland trace apart</h4>
+            </div>
+            <div className={styles.boxline}>
+              <div className={styles.boxbottom}>
+                <span>Fund</span>
+                <p>Fund III</p>
+              </div>
+              <div className={styles.boxbottom}>
+                <span>IRR</span>
+                <h6>12%</h6>
+              </div>
+              <div className={styles.boxbottom}>
+                <span>Multiple</span>
+                <p>1.84x</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    })
+  }, [dataList])
 
   var settings = {
     dots: false,
@@ -126,128 +172,7 @@ export default function HomePage() {
             <div className={styles.portfolioslider}>
 
               <Slider {...settings}>
-                <div className={styles.px4} >
-
-                  <div className={styles.cardBg}>
-                    <div className={styles.cartImage}>
-                      <div className={styles.Imagehover}>
-                        <img src={Imagone} />
-                        <div className={styles.backgroundlr}>
-                          <button>Learn More</button>
-                        </div>
-                      </div>
-                      <div className={styles.tag}>EQUITY</div>
-                      <h4>Woodland trace apart</h4>
-                    </div>
-                    <div className={styles.boxline}>
-                      <div className={styles.boxbottom}>
-                        <span>Fund</span>
-                        <p>Fund III</p>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>IRR</span>
-                        <h6>12%</h6>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>Multiple</span>
-                        <p>1.84x</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className={styles.px4}>
-
-                  <div className={styles.cardBg}>
-                    <div className={styles.cartImage}>
-                      <div className={styles.Imagehover}>
-                        <img src={Imagone} />
-                        <div className={styles.backgroundlr}>
-                          <button>Learn More</button>
-                        </div>
-                      </div>
-                      <div className={styles.tag}>EQUITY</div>
-                      <h4>Woodland trace apart</h4>
-                    </div>
-                    <div className={styles.boxline}>
-                      <div className={styles.boxbottom}>
-                        <span>Fund</span>
-                        <p>Fund III</p>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>IRR</span>
-                        <h6>12%</h6>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>Multiple</span>
-                        <p>1.84x</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className={styles.px4}>
-
-                  <div className={styles.cardBg}>
-                    <div className={styles.cartImage}>
-                      <div className={styles.Imagehover}>
-                        <img src={Imagone} />
-                        <div className={styles.backgroundlr}>
-                          <button>Learn More</button>
-                        </div>
-                      </div>
-                      <div className={styles.tag}>EQUITY</div>
-                      <h4>Woodland trace apart</h4>
-                    </div>
-                    <div className={styles.boxline}>
-                      <div className={styles.boxbottom}>
-                        <span>Fund</span>
-                        <p>Fund III</p>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>IRR</span>
-                        <h6>12%</h6>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>Multiple</span>
-                        <p>1.84x</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className={styles.px4}>
-
-                  <div className={styles.cardBg}>
-                    <div className={styles.cartImage}>
-                      <div className={styles.Imagehover}>
-                        <img src={Imagone} />
-                        <div className={styles.backgroundlr}>
-                          <button>Learn More</button>
-                        </div>
-                      </div>
-                      <div className={styles.tag}>EQUITY</div>
-                      <h4>Woodland trace apart</h4>
-                    </div>
-                    <div className={styles.boxline}>
-                      <div className={styles.boxbottom}>
-                        <span>Fund</span>
-                        <p>Fund III</p>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>IRR</span>
-                        <h6>12%</h6>
-                      </div>
-                      <div className={styles.boxbottom}>
-                        <span>Multiple</span>
-                        <p>1.84x</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-
+                {renderData}
               </Slider>
             </div>
 
@@ -358,29 +283,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className={styles.careerBg}>
-          <div className='container'>
-            <div className={styles.BannerTitle}>
-              <h4>Career <br />
-                Opportunities Inquiry</h4>
-            </div>
-            <div className={styles.GridFrom}>
-              <div className={styles.subGrid}>
-                <input placeholder='Enter Name' />
-              </div>
-              <div className={styles.subGrid}>
-                <input placeholder='Enter Email' />
-              </div>
-              <div className={styles.subGrid}>
-                <input placeholder='Enter Phone Number' />
-              </div>
-            </div>
-            <div className={styles.buttonGrop} >
-              <button>SUBMIT</button>
-              <button>VIEW OPPORTUNITIES</button>
-            </div>
-          </div>
-        </div>
+        <CTA/>
 
         <div className={styles.boxgreen}>
           <div className='container'>
