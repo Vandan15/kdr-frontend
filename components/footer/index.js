@@ -66,12 +66,11 @@ export default function Footer() {
               <div className={styles.links}>
                 <h3>Quick Links</h3>
                  <div>
-                   <a>Education</a>
-                   <a>News</a>
-                   <a>FAQ’s</a>
-                   <a>Secirity</a>
-                   <a>Legal & Disclosures</a>
-                   <a>Contact</a>
+                   <Link href='/current-portfolio'><a target={'_blank'}>Portfolio</a></Link>
+                   <Link href='/career-opportunities'><a target={'_blank'}>Career & Opportunities</a></Link>
+                   <Link href='/invest-with-us'><a target={'_blank'}>Invest With Us</a></Link>
+                   <Link href='/about-us'><a target={'_blank'}>About Us</a></Link>
+                   <Link href='/contact-us'><a target={'_blank'}>Contact Us</a></Link>
                  </div>
               </div>
             </div>

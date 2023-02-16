@@ -16,9 +16,6 @@ const OS3 = '/assets/images/os3.png';
 const Linkdin = '/assets/images/linkdin.png';
 
 export default function Aboutus() {
-
-
-
   return (
     <div>
       <Header />
